@@ -362,7 +362,7 @@ def _translate_aqt(circ: Circuit) -> Tuple[List[List], str]:
         elif optype == OpType.Measure:
             # predicate has already checked format is correct, so
             # errors are not handled here
-            qb_id = cmd.qubits[0].index[0]
+            qb_id = cmd.qubit_sets[0].index[0]
             bit_id = cmd.bits[0].index[0]
             while len(measures) <= bit_id:
                 measures.append(None)
