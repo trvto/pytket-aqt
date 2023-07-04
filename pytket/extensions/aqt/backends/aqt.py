@@ -35,7 +35,7 @@ from pytket.backends.backendinfo import fully_connected_backendinfo
 from pytket.backends.backendresult import BackendResult
 from pytket.backends.resulthandle import _ResultIdTuple
 from pytket.circuit import Circuit
-from pytket.circuit import Node  # type: ignore
+from pytket.circuit import Node
 from pytket.circuit import OpType  # type: ignore
 from pytket.circuit import Qubit  # type: ignore
 from pytket.passes import auto_rebase_pass  # type: ignore
