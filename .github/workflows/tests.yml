@@ -56,7 +56,7 @@ jobs:
           fi
 
   tests-pre-release:
-    name: Run ${{ matrix.session }}
+    name: Run pre-release tests
     needs: check-for-pytket-pre-release
     if: needs.check-for-pytket-pre-release.outputs.pre-release-exists == 'true'
     strategy:
