@@ -42,9 +42,10 @@ jobs:
       - name: Version checks
         id: check-pytket-prerelease
         run: |
+          set -eo pipefail
           pip install lastversion
-          LATEST_STABLE_RELEASE=$(lastversion CQCL/pytket-qir --at github)
-          LATEST_RELEASE=$(lastversion --pre CQCL/pytket-qir --at github)
+          LATEST_STABLE_RELEASE=$(lastversion CQCL/tket --at github)
+          LATEST_RELEASE=$(lastversion --pre CQCL/tket --at github)
           echo "Latest pytket release: ${LATEST_RELEASE}"
           echo "Latest stable release: ${LATEST_STABLE_RELEASE}"
           if [ ${LATEST_STABLE_RELEASE} == ${LATEST_RELEASE} ]; then
