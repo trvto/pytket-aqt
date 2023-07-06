@@ -37,9 +37,9 @@ jobs:
     name: Check for pytket pre-release
     runs-on: "ubuntu-22.04"
     outputs:
-      pre-release-exists: ${{ steps.filter.outputs.PRE_RELEASE_EXISTS }}
+      pre-release-exists: ${{ steps.check-pytket-prerelease.outputs.PRE_RELEASE_EXISTS }}
     steps:
-      - name: Compute pre-commit cache key
+      - name: Version checks
         id: check-pytket-prerelease
         run: |
           pip install lastversion
