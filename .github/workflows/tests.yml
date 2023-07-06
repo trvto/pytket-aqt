@@ -41,6 +41,8 @@ jobs:
     steps:
       - name: Version checks
         id: check-pytket-prerelease
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -eo pipefail
           pip install lastversion
